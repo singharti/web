@@ -1,0 +1,17 @@
+<p>Test KO</p>
+ 
+ 
+<ul>
+<!-- ko foreach:names -->
+   <li>
+      <!-- data-bind="style: {color: color1}" -->
+       <span ><!-- ko text: $data.firstname --><!-- /ko --></span>
+       <span data-bind="text: $data.lastname"></span>
+   </li>
+<!-- /ko -->
+</ul>
+ 
+First Name: <input type="text" name="firstname" data-bind="textInput: firstname" />
+Last Name: <input type="text" name="lastname" data-bind="textInput: lastname" />
+ 
+<input type="button" value="Add" data-bind="click : addName" />
